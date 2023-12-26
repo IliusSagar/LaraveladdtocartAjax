@@ -18,6 +18,8 @@
 <form id="add-to-cart-form" action="{{ url('cart/product/add/'.$product->id)}}" method="post">
     @csrf
     <br>
+    <h3>Name: {{$product->name}}</h3>
+    <h3>Price: {{$product->name}}</h3>
     <div class="product__details__quantity">
         <div class="quantity">
             <div class="pro-qty">

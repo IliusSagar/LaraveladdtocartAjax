@@ -22,6 +22,10 @@ Route::get('/', function () {
     return view('products');
 });
 
+Route::get('/all', function () {
+    return view('all_products');
+});
+
 
 // Route::post('/add-to-cart', 'CartController@addToCart')->name('cart.add');
 // Route::post('/add-to-cart',[CartController::class,'addToCart'])->name('addToCart');
@@ -31,3 +35,4 @@ Route::get('/', function () {
 
 // Cart Routes
 Route::post('/cart/product/add/{id}', [CartController::class, 'addCart']);
+Route::post('/all/cart/product/add/{id}', [CartController::class, 'allCart']);
