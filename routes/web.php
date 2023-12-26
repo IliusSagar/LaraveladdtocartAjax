@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('products');
 });
+
+
+// Route::post('/add-to-cart', 'CartController@addToCart')->name('cart.add');
+// Route::post('/add-to-cart',[CartController::class,'addToCart'])->name('addToCart');
+
+// Route::get('/reload-div', 'YourController@reloadDiv')->name('reload.div');
+// Route::get('/reload-div',[CartController::class,'reloadDiv'])->name('reload.div');
+
+// Cart Routes
+Route::post('/cart/product/add/{id}', [CartController::class, 'addCart']);
